@@ -1,0 +1,57 @@
+/* ----- Fonts ----- */
+@font-face {
+	font-family: 'Karla';
+	src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf'),
+		url('./assets/fonts/Karla-VariableFont_wght.ttf'),
+		url('./assets/fonts/static/Karla-Bold.ttf'),
+		url('./assets/fonts/static/Karla-Regular.ttf');
+}
+
+/* ----- Variables ----- */
+:root {
+	/* Colors */
+	--clr-gray-500: hsl(186, 15%, 89%);
+	--clr-gray-900: hsl(187, 24%, 22%);
+	--clr-green-200: hsl(148, 38%, 91%);
+	--clr-green-600: hsl(169, 82%, 27%);
+	--clr-red-500: hsl(0, 66%, 54%);
+	--clr-white-0: hsl(0, 0%, 100%);
+
+	/* Font Size */
+	--fs-heading-lg: 2rem;
+	--fs-body-md: 1.125rem;
+	--fs-body-sm: 1rem;
+}
+
+/* ----- Reset ----- */
+
+/* Remove Default Spacing */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Set core body defaults */
+body {
+	font-family: 'Karla', sans-serif;
+}
+
+body,
+main {
+	min-height: 100vh;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	display: block;
+}
+
+/* ----- Application Styles ----- */
