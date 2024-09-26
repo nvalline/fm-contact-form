@@ -226,6 +226,11 @@ textarea {
 	border: none;
 }
 
+.query-container input:focus ~ .checkmark,
+.consent-container input:focus ~ .checkbox {
+	outline: -webkit-focus-ring-color auto 1px;
+}
+
 button {
 	padding: 1rem 2.5rem;
 	width: 100%;
