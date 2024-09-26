@@ -19,9 +19,10 @@
 	<body>
 		<main>
 			<form>
-				<h1>Contact Us</h1>
-				<div>
-					<div>
+				<h1 class="title">Contact Us</h1>
+
+				<div class="contact-block">
+					<div class="input-block">
 						<label for="firstName">First Name <span>*</span></label>
 						<input
 							type="text"
@@ -31,9 +32,11 @@
 							aria-describedby="firstName-instructions"
 							required
 						/>
-						<p id="firstName-instructions">This field is required</p>
+						<p id="firstName-instructions" class="error hidden">
+							This field is required
+						</p>
 					</div>
-					<div>
+					<div class="input-block">
 						<label for="lastName">Last Name <span>*</span></label>
 						<input
 							type="text"
@@ -43,9 +46,11 @@
 							aria-describedby="lastName-instructions"
 							required
 						/>
-						<p id="lastName-instructions">This field is required</p>
+						<p id="lastName-instructions" class="error hidden">
+							This field is required
+						</p>
 					</div>
-					<div>
+					<div class="input-block">
 						<label for="email">Email Address <span>*</span></label>
 						<input
 							type="text"
@@ -55,13 +60,17 @@
 							aria-describedby="email-instructions"
 							required
 						/>
-						<p id="email-instructions">Please enter a valid email address</p>
+						<p id="email-instructions" class="error hidden">
+							Please enter a valid email address
+						</p>
 					</div>
 				</div>
+
 				<fieldset>
 					<legend>Query Type <span>*</span></legend>
-					<div>
-						<div>
+					<div class="queries">
+						<label for="general" class="query-container"
+							>General Enquiry
 							<input
 								type="radio"
 								name="queryType"
@@ -69,42 +78,54 @@
 								aria-describedby="query-instructions"
 								required
 							/>
-							<label for="general">General Enquiry</label>
-						</div>
-						<div>
+							<span class="checkmark"></span>
+						</label>
+
+						<label for="support" class="query-container"
+							>Support Request
 							<input type="radio" name="queryType" id="support" />
-							<label for="support">Support Request</label>
-						</div>
+							<span class="checkmark"></span>
+						</label>
 					</div>
-					<p id="query-instructions">Please select a query type</p>
+					<p id="query-instructions" class="error hidden">
+						Please select a query type
+					</p>
 				</fieldset>
-				<label for="message">Message <span>*</span></label>
-				<textarea
-					name="message"
-					id="message"
-					aria-describedby="message-instructions"
-					required
-				></textarea>
-				<p id="message-instructions">This field is required</p>
-				<div>
-					<input
-						type="checkbox"
-						name="consent"
-						id="consent"
-						aria-describedby="consent-instructions"
+
+				<div class="message-block">
+					<label for="message">Message <span>*</span></label>
+					<textarea
+						name="message"
+						id="message"
+						aria-describedby="message-instructions"
 						required
-					/>
-					<label for="consent"
-						>I consent to being contacted by the team <span>*</span></label
-					>
-					<p id="consent-instructions">
+					></textarea>
+					<p id="message-instructions" class="error hidden">
+						This field is required
+					</p>
+				</div>
+
+				<div class="consent-block">
+					<label for="consent" class="consent-container"
+						>I consent to being contacted by the team <span>*</span>
+						<input
+							type="checkbox"
+							name="consent"
+							id="consent"
+							aria-describedby="consent-instructions"
+							required
+						/>
+						<span class="checkbox"></span>
+					</label>
+					<p id="consent-instructions" class="error hidden">
 						To submit this form, please consent to being contacted
 					</p>
 				</div>
+
 				<button type="submit">Submit</button>
 			</form>
 
-			<div>
+			<div class="confirmation hidden">
 				<h2>Message Sent!</h2>
 				<p>Thanks for completing the form. We'll be in touch soon!</p>
 			</div>
