@@ -69,6 +69,7 @@ main {
 form {
 	padding: 1.5rem;
 	width: 100%;
+	max-width: 736px;
 	background-color: var(--clr-white-0);
 	border-radius: 1rem;
 }
@@ -271,6 +272,7 @@ textarea:has(+ p:not(.hidden)) {
 
 /* ----- Media Queries ----- */
 
+/* Tablet */
 @media (min-width: 768px) {
 	main {
 		padding: 8rem 2.5rem;
@@ -278,7 +280,6 @@ textarea:has(+ p:not(.hidden)) {
 
 	form {
 		padding: 2.5rem;
-		/* width: 610px; */
 	}
 
 	.name-block {
@@ -293,5 +294,12 @@ textarea:has(+ p:not(.hidden)) {
 
 	textarea {
 		height: 132px;
+	}
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+	textarea {
+		height: 105px;
 	}
 }
