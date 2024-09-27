@@ -130,6 +130,11 @@ textarea {
 	transition: all 300ms ease-in-out;
 }
 
+input:focus,
+textarea:focus {
+	outline: 1px solid var(--clr-green-600);
+}
+
 input:hover,
 textarea:hover,
 .query-container:hover {
@@ -247,7 +252,11 @@ textarea {
 
 .query-container input:focus ~ .checkmark,
 .consent-container input:focus ~ .checkbox {
-	outline: -webkit-focus-ring-color auto 1px;
+	outline: var(--clr-green-600) auto 1px;
+}
+
+.query-container:has(input:focus) {
+	background-color: var(--clr-green-200);
 }
 
 button {
