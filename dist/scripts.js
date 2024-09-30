@@ -49,5 +49,14 @@ const validateInputs = (event) => {
             message: 'Incorrect format'
         });
     }
+    // Validate Email
+    const email = document.getElementById('email');
+    if (email.validity.valueMissing || email.validity.typeMismatch) {
+        isValid = false;
+        showErrorMessage({
+            inputElement: email,
+            message: 'Please enter a valid email address'
+        });
+    }
 };
 form.addEventListener('submit', validateInputs);
