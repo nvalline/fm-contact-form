@@ -15,15 +15,17 @@
 		<title>Frontend Mentor | Contact form</title>
 
 		<link rel="stylesheet" href="./styles.css" />
+
+		<script defer src="./dist/scripts.js"></script>
 	</head>
 	<body>
 		<main>
-			<form>
+			<form action="" class="form" novalidate>
 				<h1 class="title">Contact Us</h1>
 
 				<div class="contact-block">
 					<div class="name-block">
-						<div class="input-block">
+						<div class="form__group input-block">
 							<label for="firstName">First Name <span>*</span></label>
 							<input
 								type="text"
@@ -33,11 +35,9 @@
 								aria-describedby="firstName-instructions"
 								required
 							/>
-							<p id="firstName-instructions" class="error-message hidden">
-								This field is required
-							</p>
+							<p id="firstName-instructions" class="error-message hidden"></p>
 						</div>
-						<div class="input-block">
+						<div class="form__group input-block">
 							<label for="lastName">Last Name <span>*</span></label>
 							<input
 								type="text"
@@ -52,7 +52,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="input-block">
+					<div class="form__group input-block">
 						<label for="email">Email Address <span>*</span></label>
 						<input
 							type="text"
@@ -124,7 +124,7 @@
 					</p>
 				</div>
 
-				<button type="submit">Submit</button>
+				<button type="submit" id="submitButton">Submit</button>
 			</form>
 
 			<div class="confirmation hidden">

@@ -67,7 +67,7 @@ main {
 	background-color: var(--clr-green-200);
 }
 
-form {
+.form {
 	padding: 1.5rem;
 	width: 100%;
 	max-width: 736px;
@@ -302,7 +302,7 @@ textarea:has(+ p:not(.hidden)) {
 		padding: 8rem 2.5rem;
 	}
 
-	form {
+	.form {
 		padding: 2.5rem;
 	}
 
