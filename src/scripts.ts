@@ -77,6 +77,31 @@ const validateInputs = (event: SubmitEvent) => {
 			message: 'Please enter a valid email address'
 		});
 	}
+
+	// Validate Query Type
+	const queryTypeFieldset = document.getElementById(
+		'fieldset'
+	) as HTMLFormElement;
+	const queryTypeRadioInputs = document.querySelectorAll(
+		'input[name="queryType"]'
+	) as NodeListOf<HTMLFormElement>;
+
+	let queryTypeChecked = false;
+
+	queryTypeRadioInputs.forEach((input) => {
+		if (input.checked) {
+			queryTypeChecked = true;
+		}
+	});
+
+	if (!queryTypeChecked) {
+		isValid = false;
+
+		showErrorMessage({
+			inputElement: queryTypeFieldset,
+			message: 'Please select a query type'
+		});
+	}
 };
 
 form.addEventListener('submit', validateInputs);
