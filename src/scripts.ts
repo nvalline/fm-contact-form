@@ -126,6 +126,15 @@ const validateInputs = (event: SubmitEvent) => {
 			message: 'To submit this form, please consent to being contacted'
 		});
 	}
+
+	// Display Success
+	const confirmation = document.querySelector('.confirmation') as HTMLElement;
+
+	if (isValid) {
+		confirmation.classList.remove('hidden');
+
+		form.reset();
+	}
 };
 
 form.addEventListener('submit', validateInputs);
