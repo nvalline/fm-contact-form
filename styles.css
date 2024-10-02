@@ -60,6 +60,7 @@ picture {
 /* ----- Application Styles ----- */
 
 main {
+	position: relative;
 	padding: 2rem 1rem;
 	display: flex;
 	align-items: center;
@@ -290,6 +291,38 @@ textarea:has(+ p:not(.hidden)) {
 	border: 1px solid var(--clr-red-500);
 }
 
+.confirmation {
+	position: fixed;
+	top: 1.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 1.5rem;
+	width: 327px;
+	background-color: var(--clr-gray-900);
+	border-radius: 12px;
+}
+
+.confirmation p {
+	font-size: var(--fs-body-sm);
+	font-weight: 400;
+	line-height: 150%;
+	color: var(--clr-green-200);
+}
+
+.confirmation-container {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.confirmation-container h2 {
+	font-size: var(--fs-body-md);
+	font-weight: 700;
+	line-height: 150%;
+	color: var(--clr-white-0);
+}
+
 .hidden {
 	display: none;
 }
@@ -318,6 +351,10 @@ textarea:has(+ p:not(.hidden)) {
 
 	textarea {
 		height: 132px;
+	}
+
+	.confirmation {
+		width: 450px;
 	}
 }
 
