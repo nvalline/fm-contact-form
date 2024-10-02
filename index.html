@@ -88,7 +88,7 @@
 					<p id="query-instructions" class="error-message hidden"></p>
 				</fieldset>
 
-				<div class="message-block">
+				<div class="form__group message-block">
 					<label for="message">Message <span>*</span></label>
 					<textarea
 						name="message"
@@ -96,12 +96,10 @@
 						aria-describedby="message-instructions"
 						required
 					></textarea>
-					<p id="message-instructions" class="error-message hidden">
-						This field is required
-					</p>
+					<p id="message-instructions" class="error-message hidden"></p>
 				</div>
 
-				<div class="consent-block">
+				<div class="form__group consent-block">
 					<label for="consent" class="consent-container"
 						>I consent to being contacted by the team <span>*</span>
 						<input
@@ -113,9 +111,7 @@
 						/>
 						<span class="checkbox"></span>
 					</label>
-					<p id="consent-instructions" class="error-message hidden">
-						To submit this form, please consent to being contacted
-					</p>
+					<p id="consent-instructions" class="error-message hidden"></p>
 				</div>
 
 				<button type="submit" id="submitButton">Submit</button>

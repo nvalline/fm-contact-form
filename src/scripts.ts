@@ -102,6 +102,30 @@ const validateInputs = (event: SubmitEvent) => {
 			message: 'Please select a query type'
 		});
 	}
+
+	// Validate Message
+	const message = document.getElementById('message') as HTMLFormElement;
+
+	if (message.validity.valueMissing) {
+		isValid = false;
+
+		showErrorMessage({
+			inputElement: message,
+			message: 'This field is required'
+		});
+	}
+
+	// Validate Consent
+	const consentCheckbox = document.getElementById('consent') as HTMLFormElement;
+
+	if (!consentCheckbox.checked) {
+		isValid = false;
+
+		showErrorMessage({
+			inputElement: consentCheckbox,
+			message: 'To submit this form, please consent to being contacted'
+		});
+	}
 };
 
 form.addEventListener('submit', validateInputs);

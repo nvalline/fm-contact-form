@@ -74,5 +74,23 @@ const validateInputs = (event) => {
             message: 'Please select a query type'
         });
     }
+    // Validate Message
+    const message = document.getElementById('message');
+    if (message.validity.valueMissing) {
+        isValid = false;
+        showErrorMessage({
+            inputElement: message,
+            message: 'This field is required'
+        });
+    }
+    // Validate Consent
+    const consentCheckbox = document.getElementById('consent');
+    if (!consentCheckbox.checked) {
+        isValid = false;
+        showErrorMessage({
+            inputElement: consentCheckbox,
+            message: 'To submit this form, please consent to being contacted'
+        });
+    }
 };
 form.addEventListener('submit', validateInputs);
