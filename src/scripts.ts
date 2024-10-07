@@ -131,9 +131,13 @@ const validateInputs = (event: SubmitEvent) => {
 	const confirmation = document.querySelector('.confirmation') as HTMLElement;
 
 	if (isValid) {
-		confirmation.classList.remove('hidden');
+		confirmation.classList.add('open');
 
 		form.reset();
+
+		setTimeout(() => {
+			confirmation.classList.add('close');
+		}, 3000);
 	}
 };
 

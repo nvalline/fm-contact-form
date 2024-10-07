@@ -292,6 +292,7 @@ textarea:has(+ p:not(.hidden)) {
 }
 
 .confirmation {
+	display: none;
 	position: fixed;
 	top: 1.5rem;
 	left: 50%;
@@ -300,6 +301,24 @@ textarea:has(+ p:not(.hidden)) {
 	width: 327px;
 	background-color: var(--clr-gray-900);
 	border-radius: 12px;
+	transition: all 0.3s ease-in, display 0.3s ease-in allow-discrete;
+}
+
+.confirmation.open {
+	display: block;
+	opacity: 1;
+}
+
+.confirmation.open.close {
+	display: none;
+	top: -1.5rem;
+	opacity: 0;
+}
+
+@starting-style {
+	.confirmation.open {
+		opacity: 0;
+	}
 }
 
 .confirmation p {
